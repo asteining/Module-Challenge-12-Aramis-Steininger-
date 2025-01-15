@@ -31,25 +31,24 @@ This project serves as a professional portfolio for showcasing your skills, expe
 Follow these steps to set up the project locally:
 
 1. Clone the repository:
-   - ```bash
    - git clone https://github.com/your-username/your-repo-name.git
-- Navigate to the project directory:
+   - Navigate to the project directory:
 
 
 2. Install dependencies
-- npm install
+   - npm install
 
 3. Start the development server:
-- npm run dev
+   - npm run dev
 
 ## Usage
 1. To run and use the application:
 
 2. Development Mode: Run the app locally with:
-- npm run dev
+   - npm run dev
 
 3. Production Build: Create a production-ready build with:
-- npm run build
+   - npm run build
 
 
 ## Features
