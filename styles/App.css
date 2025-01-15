@@ -1,0 +1,43 @@
+/* General reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Make the page take up the full viewport height */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 1000vh;
+}
+
+/* Main grows to fill available space */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Footer styles */
+footer {
+  display: flex;               /* Use flexbox for alignment */
+  justify-content: center;     /* Center links horizontally */
+  gap: 1.5rem;                 /* Add space between items */
+  background-color: #333;      /* Optional: Footer background */
+  color: white;                /* Optional: Footer text color */
+  padding: 1rem;               /* Add padding around the footer */
+}
+
+footer a {
+  color: white;                /* Link color */
+  text-decoration: none;       /* Remove underline */
+  font-size: 1.2rem;           /* Increase link size */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer a:hover {
+  color: #007bff;              /* Highlight color on hover */
+}
+
+

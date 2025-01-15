@@ -1,22 +1,49 @@
-import { useForm } from 'react-hook-form';
+import { useState } from "react";
+import validator from "validator";
+import "/styles/contact.css";
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState({});
 
-  const onSubmit = (data) => {
-    alert(`Message sent: ${JSON.stringify(data)}`);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = {};
+    if (!formData.name) newErrors.name = "Name is required";
+    if (!validator.isEmail(formData.email)) newErrors.email = "Invalid email";
+    if (!formData.message) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      alert("Form submitted successfully!");
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" {...register('name', { required: true })} placeholder="Name" />
-      {errors.name && <p>Name is required</p>}
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Name"
+        value={formData.name}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+      />
+      {errors.name && <span>{errors.name}</span>}
 
-      <input type="email" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })} placeholder="Email" />
-      {errors.email && <p>Valid email is required</p>}
+      <input
+        type="email"
+        placeholder="Email"
+        value={formData.email}
+        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+      />
+      {errors.email && <span>{errors.email}</span>}
 
-      <textarea {...register('message', { required: true })} placeholder="Message"></textarea>
-      {errors.message && <p>Message is required</p>}
+      <textarea
+        placeholder="Message"
+        value={formData.message}
+        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+      />
+      {errors.message && <span>{errors.message}</span>}
 
       <button type="submit">Send</button>
     </form>

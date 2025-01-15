@@ -1,8 +1,9 @@
-import Navigation from './Navigation';
+import Navigation from "/src/components/Navigation";
+import "/styles/header.css";
 
 const Header = () => (
   <header>
-    <h1>Developer Name</h1>
+    <h1>Aramis Jason Steininger</h1>
     <Navigation />
   </header>
 );

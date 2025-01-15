@@ -1,0 +1,70 @@
+/* Container for each project */
+.project {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;    /* Center content horizontally */
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ddd;    /* Subtle border */
+    border-radius: 8px;        /* Rounded corners */
+    padding: 1.5rem;           /* Padding inside the container */
+    margin: 1rem;              /* Space between projects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  }
+  
+  /* Project hover effect */
+  .project:hover {
+    transform: translateY(-5px); /* Lift project on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  /* Image styling */
+  .project img {
+    width: 100%;              /* Image takes full width */
+    height: auto;             /* Maintain aspect ratio */
+    border-radius: 8px;       /* Match container corners */
+    margin-bottom: 1rem;      /* Space below image */
+    object-fit: cover;        /* Ensures the image fills the space properly */
+  }
+  
+  /* Title styling */
+  .project h3 {
+    font-size: 1.5rem;        /* Slightly larger font */
+    color: #333;              /* Dark text color */
+    margin: 0.5rem 0 1rem;    /* Space around the title */
+    text-align: center;
+  }
+  
+  /* Links container */
+  .project a {
+    display: inline-block;    /* Makes each link a block */
+    margin: 0.5rem 0;         /* Space between links */
+    padding: 0.7rem 1.2rem;   /* Padding inside links */
+    font-size: 1rem;          /* Font size */
+    text-decoration: none;    /* Remove underline */
+    color: #fff;              /* White text */
+    background-color: #007bff; /* Primary blue background */
+    border-radius: 4px;       /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Link hover effect */
+  .project a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .project {
+      padding: 1rem;          /* Reduce padding on small screens */
+    }
+  
+    .project h3 {
+      font-size: 1.2rem;      /* Slightly smaller title */
+    }
+  
+    .project a {
+      font-size: 0.9rem;      /* Adjust link font size */
+    }
+  }
+  

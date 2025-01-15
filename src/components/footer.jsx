@@ -1,10 +1,9 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import "/styles/App.css";
 
 const Footer = () => (
   <footer>
-    <a href="https://github.com/username"><FaGithub /></a>
-    <a href="https://linkedin.com/in/username"><FaLinkedin /></a>
-    <a href="https://twitter.com/username"><FaTwitter /></a>
+    <a href="https://github.com/asteining">GitHub</a>
+    <a href="https://www.linkedin.com/in/aramis-steininger-213433199/">LinkedIn</a>
   </footer>
 );
 
