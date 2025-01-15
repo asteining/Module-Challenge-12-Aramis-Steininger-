@@ -65,4 +65,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 - ![Alt Text](/src/assets/Challenge-12-SS.png)
 
 
-## Project Link: https://github.com/asteining/Module-Challenge-12-Aramis-Steininger-
+## Project Links
+ - Github: https://github.com/asteining/Module-Challenge-12-Aramis-Steininger-
+ - Netlify: 
