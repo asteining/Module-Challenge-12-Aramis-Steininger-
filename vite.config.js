@@ -6,14 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    open: true,
-  },
-  build: {
-    rollupOptions: {
-      external: ["/src/Pages/AboutMe", "/src/components/Footer", 
-        "/src/components/Header", "/src/components/Navigation", 
-        "/src/components/Project", "/src/Pages/Resume",
-         "src/Pages/Portfolio", "src/Pages/Contact"],
-    },
-  },
-});
+      open: true,
+    }
+  });
+
