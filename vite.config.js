@@ -10,8 +10,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ["/src/Pages/AboutMe"], // Externalize AboutMe
-      external: ["/src/components/Footer"],
+      external: ["/src/Pages/AboutMe", "/src/components/Footer"],
     },
   },
 });
